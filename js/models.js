@@ -7,8 +7,8 @@ var markers = [{
     modelScale: '0.003 0.003 0.003',
     modelPosition: '0 0 0',
     modelRotation: '180 270 90',
-    Lat: '50.89957191',
-    Long: '-1.40386015'
+    Lat: '40.1864288',
+    Long: '-8.4186784'
   },
   {
     name: '2',
