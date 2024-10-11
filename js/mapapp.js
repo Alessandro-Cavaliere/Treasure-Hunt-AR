@@ -20,6 +20,19 @@ navigator.geolocation.getCurrentPosition(function (position) {
   map.setView([position.coords.latitude, position.coords.longitude], 30);
 });
 
+navigator.geolocation.watchPosition(function (position) {
+  console.log(position);
+  map.setView([position.coords.latitude, position.coords.longitude], 30);
+
+  if (marker != undefined) {
+    map.removeLayer(marker);
+  }
+
+  marker = L.marker([position.coords.latitude, position.coords.longitude], {
+    icon: customIcon
+  }).addTo(map);
+});
+
 
 map.on("click", e => {
   const latInput = document.getElementById("latInput");
