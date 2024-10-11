@@ -16,6 +16,7 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 navigator.geolocation.getCurrentPosition(function (position) {
+  console.log(position);
   map.setView([position.coords.latitude, position.coords.longitude], 30);
 });
 
